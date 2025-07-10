@@ -9,6 +9,19 @@
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+ .fixed-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+} 
+</style>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -39,7 +52,9 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
- 
+ <div class="fixed-btn text-center"> 
+ <a href="index.php" class="btn btn-primary mt-3">Return</button>  
+          </div>
 </body>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
